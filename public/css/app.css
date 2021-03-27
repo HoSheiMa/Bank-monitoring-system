@@ -267,3 +267,7 @@ a {
 div.jconfirm-box {
     min-width:400px
 }
+
+.react-date-picker__wrapper{
+    min-height: 40px !important;
+}

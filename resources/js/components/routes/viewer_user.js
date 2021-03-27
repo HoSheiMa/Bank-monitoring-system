@@ -18,15 +18,23 @@
 import Dashboard from "../views/Super_user/Dashboard.js";
 import TableList from "../views/Super_user/TableList.js";
 import BrunchesList from "../views/Super_user/BrunchesList.js";
+import BrunchesRquests from "../views/Super_user/BrunchesRquests";
 
 const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-chart-pie-35",
-    component: Dashboard,
-    layout: "/viewer",
-  },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        icon: "nc-icon nc-chart-pie-35",
+        component: Dashboard,
+        layout: "/viewer",
+    },
+    {
+        path: "/brunchesRquests",
+        name: "brunches Rquests",
+        icon: "nc-icon nc-chart",
+        component: BrunchesRquests,
+        layout: "/admin",
+    },
 ];
 
 export default dashboardRoutes;

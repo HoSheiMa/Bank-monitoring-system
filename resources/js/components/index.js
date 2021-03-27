@@ -33,17 +33,27 @@ import BrunchAdminLayout from "./layouts/BrunchAdmin";
 import BrunchMemberLayout from "./layouts/BrunchMember";
 import Print from "./layouts/Print";
 import Export from "./layouts/Export";
+import PDF from "./layouts/PDF";
+import StatementPrint from "./layouts/StatementPrint";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
 
+
         <Route path="/helper/print" >
             <Print />
+        </Route>
+        <Route path="/helper/statement/print" >
+            <StatementPrint />
         </Route>
         <Route path="/helper/Export" >
             <Export />
         </Route>
+        <Route path="/helper/PDF" >
+            <PDF />
+        </Route>
+
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
       <Route path="/viewer" render={(props) => <ViewerLayout {...props} />} />
       <Route path="/BrunchAdmin" render={(props) => <BrunchAdminLayout {...props} />} />

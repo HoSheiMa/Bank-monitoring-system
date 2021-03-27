@@ -19,6 +19,7 @@ import Dashboard from "../views/Super_user/Dashboard.js";
 import TableList from "../views/Super_user/TableList.js";
 import BrunchesList from "../views/Super_user/BrunchesList.js";
 import CreateRequest from "../views/normal_user/CreateRequest";
+import CreateStatement from "../layouts/createStatement";
 
 const dashboardRoutes = [
   {
@@ -33,6 +34,13 @@ const dashboardRoutes = [
     name: "Create request",
     icon: "nc-icon nc-chart-pie-35",
     component: CreateRequest,
+    layout: "/BrunchMember",
+  },
+    {
+    path: "/createStatement",
+    name: "Create Statement",
+    icon: "nc-icon nc-chart-pie-36",
+    component: CreateStatement,
     layout: "/BrunchMember",
   },
 ];

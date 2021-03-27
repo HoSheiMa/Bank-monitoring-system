@@ -9,5 +9,6 @@ class Branchs extends Model
 {
     use HasFactory;
         protected $table = 'branchs';
+    protected $casts = [ 'id' => 'string' ];
 
 }

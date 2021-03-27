@@ -37,6 +37,11 @@ Route::get('/admin/members', function () {
 Route::get('/admin/brunches', function () {
     return view('welcome');
 });
+Route::get('/admin/brunchesRquests', function () {
+    return view('welcome');
+});
+
+
 Route::get('/viewer/dashboard', function () {
     return view('welcome');
 });
@@ -60,6 +65,26 @@ Route::get('/helper/print', function () {
 Route::get('/helper/Export', function () {
     return view('welcome');
 });
+Route::get('/helper/PDF', function () {
+    return view('welcome');
+});
+Route::get('/BrunchMember/createStatement', function () {
+    return view('welcome');
+});
+Route::get('/admin/Statements', function () {
+    return view('welcome');
+});
+
+Route::get('/helper/statement/print', function () {
+    return view('welcome');
+});
+
+
+
+
+
+
+
 
 
 
@@ -88,9 +113,13 @@ Route::post('/api/logOut', [User::class, "logOut"]);
 
 Route::post('/api/get/DashBoardSimpleData', [Dashboard::class , 'ShortInfo']);
 Route::post('/api/show/requests', [\App\Http\Controllers\RequestsController::class , 'show']);
+Route::post('/api/show/statement', [\App\Http\Controllers\RequestsController::class , 'showStatement']);
+Route::post('/api/statement/print/getdata', [\App\Http\Controllers\RequestsController::class , 'statementGetDataForPrint']);
+
 Route::post('/api/approve/request', [\App\Http\Controllers\RequestsController::class , 'approve']);
 Route::post('/api/add/request', [\App\Http\Controllers\RequestsController::class , 'addRequest']);
 Route::post('/api/cancel/request', [\App\Http\Controllers\RequestsController::class , 'cancel']);
+Route::post('/api/add/statement', [\App\Http\Controllers\RequestsController::class , 'addStatement']);
 Route::post('/api/show/Users', [\App\Http\Controllers\User::class , 'show']);
 Route::post('/api/show/Brunches', [\App\Http\Controllers\BranchsController::class , 'show']);
 Route::post('/api/delete/Users', [\App\Http\Controllers\User::class , 'deleteUser']);

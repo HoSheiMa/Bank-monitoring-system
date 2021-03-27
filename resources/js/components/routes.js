@@ -18,32 +18,49 @@
 import Dashboard from "./views/Super_user/Dashboard.js";
 import TableList from "./views/Super_user/TableList.js";
 import BrunchesList from "./views/Super_user/BrunchesList.js";
+import BrunchesRquests from "./views/Super_user/BrunchesRquests.js";
+import StatementList from "./views/Super_user/StatementList";
+
 
 const dashboardRoutes = [
 
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-chart-pie-35",
-    component: Dashboard,
-    layout: "/admin",
-  },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        icon: "nc-icon nc-chart-pie-35",
+        component: Dashboard,
+        layout: "/admin",
+    },
 
-  {
-    path: "/members",
-    name: "members",
-    icon: "nc-icon nc-single-02",
-    component: TableList,
-    layout: "/admin",
-  },
+    {
+        path: "/members",
+        name: "members",
+        icon: "nc-icon nc-single-02",
+        component: TableList,
+        layout: "/admin",
+    },
+    {
+        path: "/brunches",
+        name: "brunches",
+        icon: "nc-icon nc-chart",
+        component: BrunchesList,
+        layout: "/admin",
+    },
+    {
+        path: "/brunchesRquests",
+        name: "brunches Rquests",
+        icon: "nc-icon nc-chart",
+        component: BrunchesRquests,
+        layout: "/admin",
+    },
 
-     {
-    path: "/brunches",
-    name: "brunches",
-    icon: "nc-icon nc-chart",
-    component: BrunchesList,
-    layout: "/admin",
-  },
+    {
+        path: "/Statements",
+        name: "brunches Statements",
+        icon: "nc-icon nc-chart",
+        component: StatementList,
+        layout: "/admin",
+    },
 
 
 ];
